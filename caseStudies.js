@@ -1,4 +1,4 @@
-const caseStudies = [
+export const caseStudies = [
   {
     title: "How we grew Acme's pipeline 3x in 6 months",
     client: "Acme Corp",
