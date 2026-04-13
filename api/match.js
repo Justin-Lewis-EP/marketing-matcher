@@ -1,4 +1,4 @@
-import { caseStudies } from '../caseStudies.js';
+import { caseStudies } from './caseStudies.js';
 import Anthropic from '@anthropic-ai/sdk';
 
 const client = new Anthropic();
