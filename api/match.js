@@ -36,7 +36,7 @@ ${JSON.stringify(caseStudies, null, 2)}
       messages: [{ role: 'user', content: need }]
     });
 
-    const raw = message.content[0].text;
+    const raw = message.content[0].text.replace(/^```(?:json)?\n?/i, '').replace(/\n?```$/i, '').trim();
     const matches = JSON.parse(raw);
     return res.status(200).json({ matches });
 
