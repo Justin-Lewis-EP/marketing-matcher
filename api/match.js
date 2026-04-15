@@ -29,7 +29,8 @@ ${JSON.stringify(caseStudies, null, 2)}
     `;
 
     const message = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      // model: 'claude-sonnet-4-20250514', this model hits token limites with the case studies, so we use a smaller one
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 1000,
       system: systemPrompt,
       messages: [{ role: 'user', content: need }]
